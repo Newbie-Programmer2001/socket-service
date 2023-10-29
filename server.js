@@ -15,7 +15,7 @@ const axios = require("axios");
 
 app.use(
   cors({
-    origin: "http://127.0.0.1:5500", // or your frontend origin
+    origin: "http://127.0.0.1:800", // or your frontend origin
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // enable set cookie
   })
@@ -65,6 +65,6 @@ io.on("connection", (socket) => {
     }
   });
 });
-server.listen(3000, () => {
-  console.log("listening on *:3000");
+server.listen(80, () => {
+  console.log("listening on *:80");
 });
